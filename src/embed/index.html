@@ -13,6 +13,7 @@
     const querys = new URLSearchParams(window.location.search);
     const result = decodeURI(querys.get("text")).replace("{day}", Math.ceil((new Date(querys.get("target")).valueOf() - new Date().valueOf()) / 86400000))
     text.innerText = result;
+    document.body.style.backgroundColor = querys.get("color") === "dark"?"#191919":"#FFFFFF";
   </script>
 </body>
 </html>

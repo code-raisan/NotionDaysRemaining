@@ -14,6 +14,7 @@
     const result = decodeURI(querys.get("text")).replace("{day}", Math.ceil((new Date(querys.get("target")).valueOf() - new Date().valueOf()) / 86400000))
     text.innerText = result;
     document.body.style.backgroundColor = querys.get("color") === "dark"?"#191919":"#FFFFFF";
+    document.body.style.color = querys.get("color") === "dark"?"#FFFFFF":"#191919";
   </script>
 </body>
 </html>
